@@ -115,6 +115,14 @@ a{color:inherit}
 .step li{position:relative;padding-left:14px;color:var(--ink-2)}
 .step li::before{content:"";position:absolute;left:0;top:.8em;width:5px;height:1px;background:var(--ink-2)}
 .tag{display:inline-block;margin-top:10px;font-size:13px;color:var(--blue);border:1px solid rgba(0,104,183,.45);border-radius:999px;padding:1px 10px}
+.sched{margin-top:12px;border-top:1px solid var(--line)}
+.sched .r{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.sched .t{font-size:13px;color:var(--blue);font-variant-numeric:tabular-nums;letter-spacing:.01em;padding-top:2px}
+.sched .c{font-size:15px;color:var(--ink);font-weight:500;line-height:1.55}
+.sched .c ol{margin-top:4px;list-style:none;counter-reset:n}
+.sched .c ol li{counter-increment:n;padding-left:16px;font-weight:400;font-size:14px;color:var(--ink-2)}
+.sched .c ol li::before{content:counter(n)".";position:absolute;left:0;top:0;width:auto;height:auto;background:none;color:var(--mute);font-size:13px}
+.sched .c small{display:block;font-weight:400;font-size:13px;color:var(--mute)}
 .note{margin-top:30px;font-size:14px;color:var(--mute)}
 
 /* 연구본부 카드 */
@@ -246,23 +254,37 @@ a{color:inherit}
         <div class="fill" id="tlFill"></div>
         <div class="step rv">
           <span class="dot"></span>
-          <p class="time">13:00</p>
+          <p class="time">13:00 ~ 15:00</p>
           <h3><span class="en">Part 1</span>1부 총괄행사</h3>
-          <ul>
-            <li>개회 및 인사말</li>
-            <li>연구조합연합회 소개</li>
-            <li>기업지원사업 소개</li>
-            <li>연구협력 성과 공유</li>
-          </ul>
+          <div class="sched">
+            <div class="r"><p class="t">13:00~13:30</p><div class="c">참석자 등록</div></div>
+            <div class="r"><p class="t">13:30~13:40</p><div class="c">개회 및 주요 내빈 소개</div></div>
+            <div class="r"><p class="t">13:40~13:55</p><div class="c">인사말 및 축사
+              <ol>
+                <li>김진균 고등기술연구원장</li>
+                <li>최기주 아주대학교 총장</li>
+                <li>김진우 한국산업기술연구조합연합회장</li>
+              </ol></div></div>
+            <div class="r"><p class="t">13:55~14:00</p><div class="c">사업 취지 및 협력성과 요약</div></div>
+            <div class="r"><p class="t">14:00~14:45</p><div class="c">외부 전문발표
+              <ol>
+                <li>한국산업기술연구조합연합회 소개<small>견승엽 사무국장</small></li>
+                <li>KEIT R&amp;D 전주기 소개 및 평가 대응 전략<small>이철희 책임</small></li>
+                <li>중진공 점프업사업 기업지원프로그램 소개<small>김종수 팀장</small></li>
+              </ol></div></div>
+            <div class="r"><p class="t">14:45~14:55</p><div class="c">연구협력 성과 공유</div></div>
+            <div class="r"><p class="t">14:55~15:00</p><div class="c">2부 안내 및 단체사진, 회의실 이동</div></div>
+          </div>
           <span class="tag">전체 참석</span>
         </div>
         <div class="step rv">
           <span class="dot"></span>
-          <p class="time">1부 종료 후 ~ 17:00</p>
+          <p class="time">15:00 ~ 17:00</p>
           <h3><span class="en">Part 2</span>2부 분야별 기술교류</h3>
           <ul>
             <li>연구본부별 세션을 동시에 진행합니다</li>
             <li>분야의 전문가와 기술 현안을 나눕니다</li>
+            <li>17:00 이후 연구자 간 네트워킹</li>
           </ul>
           <span class="tag">연구본부별 회의실</span>
         </div>
